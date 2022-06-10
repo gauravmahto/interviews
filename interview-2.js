@@ -11,7 +11,7 @@
 //   // write your code here
 // }
 
-const { randomInt, randomBytes } = require('crypto');
+import { randomBytes, randomInt } from 'crypto';
 
 let bookings = [
   { roomNo: 1, bookingStartDate: '2022-04-24', bookingEndDate: '2022-04-27' },
@@ -94,7 +94,7 @@ function addSynchDelay() {
 function newFunction(limit = 100) {
   for (let i = 0; i < limit; i++) {
     // if (randomInt(0, 10) < 7) {
-    if(getRandomNumberFromRandomBytes() < 181) {
+    if (getRandomNumberFromRandomBytes() < 181) {
       bucket1.push(i);
     } else {
       bucket2.push(i);
