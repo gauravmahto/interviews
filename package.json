@@ -1,14 +1,13 @@
 {
   "name": "interviews",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A list of questions for algos",
-  "compilerOptions": {
-    "module": "node16"
-  },
+  "types": "module",
   "main": "index.js",
   "scripts": {
-    "tests": "node --test-reporter=spec --test"
+    "tests": "node --test-reporter=spec --test",
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +20,11 @@
   },
   "homepage": "https://github.com/gauravmahto/interviews#readme",
   "devDependencies": {
-    "@types/express": "4.17.17",
-    "@types/node": "18.14.0",
-    "typescript": "4.9.5"
+    "@types/express": "4.17.20",
+    "@types/node": "20.8.10",
+    "esbuild": "0.19.5",
+    "glob": "10.3.10",
+    "typescript": "5.2.2"
   },
   "dependencies": {
     "express": "4.18.2"

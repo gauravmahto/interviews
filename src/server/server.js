@@ -1,6 +1,6 @@
 import express from 'express';
 
-import config from './config.json' assert {type: 'json'};
+import config from '../config/express.json' assert {type: 'json'};
 import { router } from './routes.js';
 
 const app = express();
