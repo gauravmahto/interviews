@@ -1,4 +1,4 @@
-class PinkyPromise {
+export class PinkyPromise {
 
   #validStates = {
 
@@ -241,7 +241,7 @@ class PinkyPromise {
 
 // --------------------------------------------------------------------------------------
 
-class PinkyPromise2 {
+export class PinkyPromise2 {
   constructor(executor) {
     if (typeof executor !== 'function') {
       throw new TypeError('Executor must be a function');

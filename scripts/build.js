@@ -21,9 +21,20 @@ const commonOptions = {
 
 export async function buildIndividualTsFiles() {
 
-  const tsFiles = await glob(join(SRC_DIR, 'self', '**/*.ts'), {
-    // ignore: '**/*.test.ts'
+  const tsFiles = await glob('**/*.ts', {
+    cwd: join(SRC_DIR, 'self'),
+    absolute: true
   });
+
+  console.log('Building individual ts files', tsFiles.join(', '));
+
+  if (tsFiles.length === 0) {
+
+    console.warn('No TypeScript files found in the specified directory.');
+
+    return;
+
+  }
 
   await build({
     ...commonOptions,
